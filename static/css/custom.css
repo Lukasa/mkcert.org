@@ -47,7 +47,7 @@ h1 {
 .dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus { background-color: #3D3175}
 .navbar-inverse { background-image: none; }
 .dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus { background-image: none; }
-.navbar-inverse { border-color: #FFFFFF}
+.navbar-inverse { border: 0; border-radius: 0;}
 .navbar-inverse .navbar-brand { color: #867DB0}
 .navbar-inverse .navbar-brand:hover { color: #FFFFFF}
 .navbar-inverse .navbar-nav>li>a { color: #867DB0}
