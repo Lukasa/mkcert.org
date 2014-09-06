@@ -72,6 +72,9 @@
         <p>Once a day, mkcert.org obtains the latest list of <a href="https://hg.mozilla.org/mozilla-central/raw-file/tip/security/nss/lib/ckfw/builtins/certdata.txt">Mozilla's trusted root CA certificates</a>. It parses the file, removes anything explicitly marked as untrusted, and then keeps the data in memory.</p>
         <p>You can then query the data, working out all the certificates we have and which ones you'd like to trust. You can then use our API calls to build your own customised PEM files, containing only the certificates you'd like to trust.</p>
         <p>You can then pass these PEM files to whatever tools you use, ensuring that they're only trusting exactly who you want to trust.</p>
+
+        <h2>What if I don't trust you?</h2>
+        <p>Your caution is commendable. The code that backs mkcert.org is <a href="https://github.com/Lukasa/mkcert">totally open source, available to anyone</a>. You can audit the code, and I invite you to do just that. If you still don't trust us, we encourage you to download the source, build it yourself and run the service on your own hardware.</p>
       </div>
     </div>
 
