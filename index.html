@@ -44,29 +44,23 @@
         <p>Take control of your certificate trust store. mkcert.org lets you choose exactly who you want to trust, and who you don't. No excuses.</p>
       </div>
 
-      <div class="row">
-        <div class="col-md-4">
-          <h2>What is mkcert.org?</h2>
-          <p>TLS and SSL are vital for the security of the web, but they're useless unless you have a list of trusted <em>root certificates</em>. These certificates list the entities that you trust unconditionally, and to whom you have delegated responsibility for authenticating the legitimate owners of a website.</p>
-          <p>Modern browsers are making it easier to evaluate your list of trusted root certificate authorities, but for non-browser tools this can be a nightmare. Projects like <a href="http://certifi.io/">certifi.io</a> have taken steps towards making it easier by providing <a href="https://hg.mozilla.org/mozilla-central/raw-file/tip/security/nss/lib/ckfw/builtins/certdata.txt">Mozilla's list of trusted root certificates</a> in a form that can be consumed by non-browser tools. However, this approach is imperfect: it means you have to trust everyone Mozilla trusts.</p>
-          <p>mkcert.org is the next step. Its mission: to make it easy to get hold of a list of root certificate authorities that <em>you</em> trust. Think of it as a shop for getting custom, artisan trust stores. Just for you.</p>
-        </div>
-        <div class="col-md-4">
-          <h2>How do I use it?</h2>
-          <p>mkcert.org provides a simple, clear, <code>wget</code>-able API for you to download PEM files for use with any tool that uses OpenSSL.</p>
-          <p>If you only want to trust Comodo, VeriSign and GeoTrust, for example, you can get your PEM file by using the following cURL command:</p>
-          <pre><code>curl https://mkcert.org/generate/comodo+verisign+geotrust</code></pre>
-          <p>Alternatively, if you want to trust everyone <em>except</em> those three entities, you can get your PEM file by using the following cURL command:</p>
-          <pre><code>curl https://mkcert.org/generate/all/except/comodo+verisign+geotrust</code></pre>
-          <p>And if you just want to see all the certificates we have in our store, try this out for size:</p>
-          <pre><code>curl https://mkcert.org/labels/</code></pre>
-        </div>
-        <div class="col-md-4">
-          <h2>How does it work?</h2>
-          <p>Once a day, mkcert.org obtains the latest list of <a href="https://hg.mozilla.org/mozilla-central/raw-file/tip/security/nss/lib/ckfw/builtins/certdata.txt">Mozilla's trusted root CA certificates</a>. It parses the file, removes anything explicitly marked as untrusted, and then keeps the data in memory.</p>
-          <p>You can then query the data, working out all the certificates we have and which ones you'd like to trust. You can then use our API calls to build your own customised PEM files, containing only the certificates you'd like to trust.</p>
-          <p>You can then pass these PEM files to whatever tools you use, ensuring that they're only trusting exactly who you want to trust.</p>
-        </div>
+      <div class="row narrow-content">
+        <h2>What is mkcert.org?</h2>
+        <p>TLS and SSL are vital for the security of the web, but they're useless unless you have a list of trusted <em>root certificates</em>. These certificates list the entities that you trust unconditionally, and to whom you have delegated responsibility for authenticating the legitimate owners of a website.</p>
+        <p>Modern browsers are making it easier to evaluate your list of trusted root certificate authorities, but for non-browser tools this can be a nightmare. Projects like <a href="http://certifi.io/">certifi.io</a> have taken steps towards making it easier by providing <a href="https://hg.mozilla.org/mozilla-central/raw-file/tip/security/nss/lib/ckfw/builtins/certdata.txt">Mozilla's list of trusted root certificates</a> in a form that can be consumed by non-browser tools. However, this approach is imperfect: it means you have to trust everyone Mozilla trusts.</p>
+        <p>mkcert.org is the next step. Its mission: to make it easy to get hold of a list of root certificate authorities that <em>you</em> trust. Think of it as a shop for getting custom, artisan trust stores. Just for you.</p>
+        <h2>How do I use it?</h2>
+        <p>mkcert.org provides a simple, clear, <code>wget</code>-able API for you to download PEM files for use with any tool that uses OpenSSL.</p>
+        <p>If you only want to trust Comodo, VeriSign and GeoTrust, for example, you can get your PEM file by using the following cURL command:</p>
+        <pre><code>curl https://mkcert.org/generate/comodo+verisign+geotrust</code></pre>
+        <p>Alternatively, if you want to trust everyone <em>except</em> those three entities, you can get your PEM file by using the following cURL command:</p>
+        <pre><code>curl https://mkcert.org/generate/all/except/comodo+verisign+geotrust</code></pre>
+        <p>And if you just want to see all the certificates we have in our store, try this out for size:</p>
+        <pre><code>curl https://mkcert.org/labels/</code></pre>
+        <h2>How does it work?</h2>
+        <p>Once a day, mkcert.org obtains the latest list of <a href="https://hg.mozilla.org/mozilla-central/raw-file/tip/security/nss/lib/ckfw/builtins/certdata.txt">Mozilla's trusted root CA certificates</a>. It parses the file, removes anything explicitly marked as untrusted, and then keeps the data in memory.</p>
+        <p>You can then query the data, working out all the certificates we have and which ones you'd like to trust. You can then use our API calls to build your own customised PEM files, containing only the certificates you'd like to trust.</p>
+        <p>You can then pass these PEM files to whatever tools you use, ensuring that they're only trusting exactly who you want to trust.</p>
       </div>
     </div>
   </body>
