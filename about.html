@@ -43,18 +43,19 @@
       <h1>About mkcert.org</h1>
 
       <div class="row narrow-content">
-        <h2>Security Considerations</h2>
-        <p>mkcert.org takes security seriously: this is no joke.</p>
-        <p>For this reason, the mkcert.org API is only available over HTTPS: if you attempt to use HTTP to get it you'll be served a 403 Forbidden status code. If you attempt to reach this page over HTTP you'll be served a redirect, and a HSTS header will be sent to prevent you trying to access it over HTTP ever again.</p>
+        <h2>Security </h2>
+        <p>Security is no joke. mkcert.org takes security seriously&mdash;very seriously.</p>
+        <p>For this reason, the mkcert.org API is only available over HTTPS (Hypertext Transfer Protocol Secure). If you attempt to use HTTP to access the API you'll be served a 403 Forbidden status code. If you attempt to reach this page over HTTP you'll be served a redirect, and an HSTS (HTTP Strict Transport Security) header will be sent to prevent you from trying to access this page over HTTP ever again.</p>
         <p>HTTPS is used to obtain the certificate list from Mozilla as well.</p>
-        <p>These facts make it extremely difficult to perform a Man-In-The-Middle attack on mkcert.org.</p>
-        <p>However, it's not impossible. To protect yourself, we recommend you save the PEM file somewhere safe, to avoid you having to get it from us repeatedly. You should only come back once every few months to refresh the file in case a certificate expires, or certificates are revoked.</p>
+        <p>These precautions make it extremely difficult to perform a Man-In-The-Middle (MITM) attack on mkcert.org. However, it's not impossible.</p>
+        <p>To protect yourself, we recommend storing the PEM file somewhere safe. By doing so, you strengthen your security and will avoid the need to repeatedly update the file from us. As a general guideline, you should only return once every few months to refresh the PEM file which updates expired or revoked certificates.</p>
         <h2>About The Project</h2>
         <h3>Philosophy</h3>
-        <p>mkcert.org is free, both as in speech and as in beer, now and always. We believe that security should be accessible to everyone, and without ulterior motive. We will never advertise at you, we will never use tracking tools to follow you, and we will never profile your access via web server logs.</p>
-        <p>This commitment to privacy and security comes at a cost: we have very limited ability to respond to bugs. Please report bugs if you find them. Links to the source code repositories can be found below: please report bugs there.</p>
+        <p>mkcert.org is free, both as in speech and as in beer, now and always.</p>
+        <p> We believe that security should be accessible to everyone, and without ulterior motive. We will never advertise at you, we will never use tracking tools to follow you, and we will never profile your access via web server logs.</p>
+        <p>This commitment to privacy and security comes at a cost. Currently, we have very limited ability to respond personally to each bug. Please report bugs if you find them, and please know we do read and very much appreciate the reports. Please report issues in <a href="https://github.com/Lukasa/mkcert.org">mkcert.org</a> repo for website issues and <a href="https://github.com/Lukasa/mkcert">mkcert</a> repo for any API issues.</p>
         <h3>Code</h3>
-        <p>mkcert.org is an open source tool, a part of the <a href="http://certifi.org/">Certifi project</a>. The source code for this website can be found <a href="https://github.com/Lukasa/mkcert.org">here</a>, and the source code for the API can be found <a href="https://github.com/Lukasa/mkcert">here</a>.</p>
+        <p>mkcert.org is an open source tool, a part of the <a href="http://certifi.io/">Certifi project</a>. The mkcert.org source code for this website can be found <a href="https://github.com/Lukasa/mkcert.org">here</a>, and the source code for the API can be found <a href="https://github.com/Lukasa/mkcert">here</a>.</p>
         <p>Contributions are welcome, as are feature requests.</p>
         <h3>People</h3>
         <p>The project owes a debt of gratitude to <a href="https://www.imperialviolet.org/">Adam Langley</a>, whose work is the foundation on which this tool is built.</p>
